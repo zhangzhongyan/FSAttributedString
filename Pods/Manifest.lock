@@ -1,0 +1,23 @@
+PODS:
+  - FSAttributedString (1.0.0)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - FSAttributedString (from `./`)
+  - Masonry
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  FSAttributedString:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  FSAttributedString: 421b3f1ad6d51627659fe78d5c33a2ca03ffac72
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 6f85ebce6844b8dd61fff4a376c11e088554796c
+
+COCOAPODS: 1.9.1
