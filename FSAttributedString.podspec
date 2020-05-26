@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "FSAttributedString"
   s.version      = "1.0.0"
-  s.summary      = "An iOS attributedString Rich text splicer"
+  s.summary      = "一个轻量级的字符拼接工具"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-			FSAtrributedMaker用于处理OC字符串富文本拼接工具,用于处理UI元素的定制效果
+FSAttributedString是一个轻量级的字符拼接工具，它以更好的语法包装了NSAttributedString。 拥有自己的属性字符模型，通过包含关系有效避免NSRange的一致性问题，链式调用，从而使布局代码更简洁易读。暂不支持Label的链接点击。
                    DESC
 
   s.homepage     = "https://github.com/zhangzhongyan/FSAttributedString"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FSAttributedString/**/*.{h,m}"
+  s.source_files  = "FSAttributedString/FSAttributedString/**/*.{h,m}"
   # s.source_files = '*.{h,m}'
 
   # s.exclude_files = "Classes/Exclude"
