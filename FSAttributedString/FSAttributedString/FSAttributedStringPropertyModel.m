@@ -28,6 +28,61 @@
 
 #pragma mark - Public Methods
 
++ (NSDictionary *)attributedWithForegroundColor:(nullable UIColor *)color
+{
+    if (color) {
+        return @{NSForegroundColorAttributeName: color};
+    } else {
+        return @{};
+    }
+}
+
++ (NSDictionary *)attributedWithFont:(nullable UIFont *)font
+{
+    if (font) {
+        return @{NSFontAttributeName: font};
+    } else {
+        return @{};
+    }
+}
+
++ (NSDictionary *)attributedWithBaselineOffset:(nullable NSNumber *)baselineOffset
+{
+    if (baselineOffset) {
+        return @{NSBaselineOffsetAttributeName: baselineOffset};
+    } else {
+        return @{};
+    }
+}
+
+
++ (NSDictionary *)attributedWithParagraphStyle:(nullable NSParagraphStyle *)paragraphStyle
+{
+    if (paragraphStyle) {
+        return @{NSParagraphStyleAttributeName: paragraphStyle};
+    } else {
+        return @{};
+    }
+}
+
++ (NSDictionary *)attributedWithUnderlineStyle:(nullable NSNumber *)underlineStyle
+{
+    if (underlineStyle) {
+        return @{NSUnderlineStyleAttributeName: underlineStyle};
+    } else {
+        return @{};
+    }
+}
+
++ (NSDictionary *)attributedWithLink:(nullable NSURL *)link
+{
+    if (link) {
+        return @{NSLinkAttributeName: link};
+    } else {
+        return @{};
+    }
+}
+
 - (NSDictionary *)attributes
 {
     NSMutableDictionary *attris = [NSMutableDictionary dictionary];

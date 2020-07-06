@@ -11,10 +11,13 @@
 		E102CE8E247CAC9D00C87912 /* FSAttributedStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E102CE8C247CAC9D00C87912 /* FSAttributedStringMaker.m */; };
 		E102CE95247CB17000C87912 /* FSAttributedStringPropertyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E102CE93247CB17000C87912 /* FSAttributedStringPropertyModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E102CE96247CB17000C87912 /* FSAttributedStringPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E102CE94247CB17000C87912 /* FSAttributedStringPropertyModel.m */; };
-		E102CE99247CBA7F00C87912 /* FSAttributedStringModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E102CE97247CBA7F00C87912 /* FSAttributedStringModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E102CE9A247CBA7F00C87912 /* FSAttributedStringModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E102CE98247CBA7F00C87912 /* FSAttributedStringModel.m */; };
 		E102CE9D247CCDF700C87912 /* UILabel+FSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = E102CE9B247CCDF700C87912 /* UILabel+FSAttributedString.h */; };
 		E102CE9E247CCDF700C87912 /* UILabel+FSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = E102CE9C247CCDF700C87912 /* UILabel+FSAttributedString.m */; };
+		E138391A24AF295E0022C60C /* FSAttributedStringProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E138391924AF295E0022C60C /* FSAttributedStringProtocol.h */; };
+		E138392124AF2E160022C60C /* FSAttributedStringWrapModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E138391F24AF2E160022C60C /* FSAttributedStringWrapModel.h */; };
+		E138392224AF2E160022C60C /* FSAttributedStringWrapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E138392024AF2E160022C60C /* FSAttributedStringWrapModel.m */; };
+		E138392524AF2E480022C60C /* FSAttributedStringMetaModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E138392324AF2E480022C60C /* FSAttributedStringMetaModel.h */; };
+		E138392624AF2E480022C60C /* FSAttributedStringMetaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E138392424AF2E480022C60C /* FSAttributedStringMetaModel.m */; };
 		E153A4E3247BD790009B87BE /* FSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = E153A4E1247BD790009B87BE /* FSAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -23,10 +26,13 @@
 		E102CE8C247CAC9D00C87912 /* FSAttributedStringMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAttributedStringMaker.m; sourceTree = "<group>"; };
 		E102CE93247CB17000C87912 /* FSAttributedStringPropertyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedStringPropertyModel.h; sourceTree = "<group>"; };
 		E102CE94247CB17000C87912 /* FSAttributedStringPropertyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAttributedStringPropertyModel.m; sourceTree = "<group>"; };
-		E102CE97247CBA7F00C87912 /* FSAttributedStringModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedStringModel.h; sourceTree = "<group>"; };
-		E102CE98247CBA7F00C87912 /* FSAttributedStringModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAttributedStringModel.m; sourceTree = "<group>"; };
 		E102CE9B247CCDF700C87912 /* UILabel+FSAttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+FSAttributedString.h"; sourceTree = "<group>"; };
 		E102CE9C247CCDF700C87912 /* UILabel+FSAttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FSAttributedString.m"; sourceTree = "<group>"; };
+		E138391924AF295E0022C60C /* FSAttributedStringProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedStringProtocol.h; sourceTree = "<group>"; };
+		E138391F24AF2E160022C60C /* FSAttributedStringWrapModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedStringWrapModel.h; sourceTree = "<group>"; };
+		E138392024AF2E160022C60C /* FSAttributedStringWrapModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAttributedStringWrapModel.m; sourceTree = "<group>"; };
+		E138392324AF2E480022C60C /* FSAttributedStringMetaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedStringMetaModel.h; sourceTree = "<group>"; };
+		E138392424AF2E480022C60C /* FSAttributedStringMetaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAttributedStringMetaModel.m; sourceTree = "<group>"; };
 		E153A4DE247BD790009B87BE /* FSAttributedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSAttributedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E153A4E1247BD790009B87BE /* FSAttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAttributedString.h; sourceTree = "<group>"; };
 		E153A4E2247BD790009B87BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,8 +71,11 @@
 				E153A4E1247BD790009B87BE /* FSAttributedString.h */,
 				E102CE8B247CAC9D00C87912 /* FSAttributedStringMaker.h */,
 				E102CE8C247CAC9D00C87912 /* FSAttributedStringMaker.m */,
-				E102CE97247CBA7F00C87912 /* FSAttributedStringModel.h */,
-				E102CE98247CBA7F00C87912 /* FSAttributedStringModel.m */,
+				E138391924AF295E0022C60C /* FSAttributedStringProtocol.h */,
+				E138391F24AF2E160022C60C /* FSAttributedStringWrapModel.h */,
+				E138392024AF2E160022C60C /* FSAttributedStringWrapModel.m */,
+				E138392324AF2E480022C60C /* FSAttributedStringMetaModel.h */,
+				E138392424AF2E480022C60C /* FSAttributedStringMetaModel.m */,
 				E102CE93247CB17000C87912 /* FSAttributedStringPropertyModel.h */,
 				E102CE94247CB17000C87912 /* FSAttributedStringPropertyModel.m */,
 				E102CE9B247CCDF700C87912 /* UILabel+FSAttributedString.h */,
@@ -83,10 +92,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102CE99247CBA7F00C87912 /* FSAttributedStringModel.h in Headers */,
 				E153A4E3247BD790009B87BE /* FSAttributedString.h in Headers */,
+				E138391A24AF295E0022C60C /* FSAttributedStringProtocol.h in Headers */,
 				E102CE9D247CCDF700C87912 /* UILabel+FSAttributedString.h in Headers */,
 				E102CE8D247CAC9D00C87912 /* FSAttributedStringMaker.h in Headers */,
+				E138392124AF2E160022C60C /* FSAttributedStringWrapModel.h in Headers */,
+				E138392524AF2E480022C60C /* FSAttributedStringMetaModel.h in Headers */,
 				E102CE95247CB17000C87912 /* FSAttributedStringPropertyModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,9 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E102CE9E247CCDF700C87912 /* UILabel+FSAttributedString.m in Sources */,
+				E138392624AF2E480022C60C /* FSAttributedStringMetaModel.m in Sources */,
+				E138392224AF2E160022C60C /* FSAttributedStringWrapModel.m in Sources */,
 				E102CE8E247CAC9D00C87912 /* FSAttributedStringMaker.m in Sources */,
 				E102CE96247CB17000C87912 /* FSAttributedStringPropertyModel.m in Sources */,
-				E102CE9A247CBA7F00C87912 /* FSAttributedStringModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +312,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangzhongyan.FSAttributedString;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -323,7 +335,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangzhongyan.FSAttributedString;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
