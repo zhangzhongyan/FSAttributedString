@@ -14,10 +14,11 @@ FSAttributedString是一个轻量级的字符拼接工具，它以更好的语�
 # 示例代码
 
 ```obj-c
+
 [self.demoLabel1 fs_makeAttributedString:^(FSAttributedStringMaker * _Nonnull make) {
-	make.append(@"首个文本蓝色15号字体\n").color(UIColor.blueColor).font([UIFont systemFontOfSize:15]);
-	make.append(@"第二个文本绿色16号字体\n").color(UIColor.greenColor).font([UIFont systemFontOfSize:16]);
-	make.append(@"第三个文本红色17号字体\n").color(UIColor.redColor).font([UIFont systemFontOfSize:17]);
+    make.append(@"首个文本蓝色15号字体\n").color(UIColor.blueColor).font([UIFont systemFontOfSize:15]);
+    make.append(@"第二个文本绿色16号字体\n").color(UIColor.greenColor).font([UIFont systemFontOfSize:16]);
+    make.append(@"第三个文本红色17号字体\n").color(UIColor.redColor).font([UIFont systemFontOfSize:17]);
 }];
 
 NSAttributedString *attributedString = [FSAttributedStringMaker makeAttributedString:^(FSAttributedStringMaker * _Nonnull make) {
