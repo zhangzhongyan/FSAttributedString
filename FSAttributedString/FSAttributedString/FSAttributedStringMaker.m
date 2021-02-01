@@ -7,12 +7,12 @@
 //
 
 #import "FSAttributedStringMaker.h"
-#import "FSAttributedStringWrapModel.h"
-#import "FSAttributedStringMetaModel.h"
+#import "FSAttributedStringItemWrapper.h"
+#import "FSAttributedStringItemMeta.h"
 
 @interface FSAttributedStringMaker ()
 
-@property (nonatomic, copy) NSMutableArray<id<FSAttributedStringProtocol>> *stringModels;
+@property (nonatomic, copy) NSMutableArray<FSAttributedStringItem *> *stringModels;
 
 /** 段落属性 */
 @property (nonatomic, strong, nullable) NSParagraphStyle *allParagrahs;
@@ -31,20 +31,20 @@
 }
 
 
-- (id<FSAttributedStringProtocol> (^)(NSString *))append
+- (FSAttributedStringItem * (^)(NSString *text))append
 {
     return ^id (NSString * _Nullable text) {
         FSAttributedStringPropertyModel *propertyModel = [[FSAttributedStringPropertyModel alloc] init];
-        FSAttributedStringWrapModel *wrapModel = [[FSAttributedStringWrapModel alloc] initWithString:text propertyModel:propertyModel];
+        FSAttributedStringItemWrapper *wrapModel = [[FSAttributedStringItemWrapper alloc] initWithString:text propertyModel:propertyModel];
         [self.stringModels addObject:wrapModel];
         return wrapModel;
     };
 }
 
-- (id<FSAttributedStringProtocol> (^)(NSAttributedString *))appendAttribute
+- (FSAttributedStringItem * (^)(NSAttributedString *attrribute))appendAttribute
 {
     return ^id (NSAttributedString * _Nullable attributedString) {
-        FSAttributedStringMetaModel *metaModel = [[FSAttributedStringMetaModel alloc] initWithAttributedString:attributedString];
+        FSAttributedStringItemMeta *metaModel = [[FSAttributedStringItemMeta alloc] initWithAttributedString:attributedString];
         [self.stringModels addObject:metaModel];
         return metaModel;
     };
@@ -62,7 +62,7 @@
 - (NSAttributedString *)attributedString
 {
     NSMutableAttributedString *items = [[NSMutableAttributedString alloc] init];
-    for (id<FSAttributedStringProtocol> model in self.stringModels) {
+    for (FSAttributedStringItem * model in self.stringModels) {
         [items appendAttributedString:model.attributedString];
     }
     if (self.allParagrahs) {
@@ -74,7 +74,7 @@
 
 #pragma mark - property
 
-- (NSMutableArray<id<FSAttributedStringProtocol>> *)stringModels {
+- (NSMutableArray<FSAttributedStringItem *> *)stringModels {
     if (!_stringModels) {
         _stringModels = [NSMutableArray array];
     }

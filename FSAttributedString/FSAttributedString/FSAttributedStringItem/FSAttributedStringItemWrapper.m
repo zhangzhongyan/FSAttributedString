@@ -1,14 +1,14 @@
 //
-//  FSAttributedStringWrapModel.m
+//  FSAttributedStringItemWrapper.m
 //  FSAttributedString
 //
 //  Created by 张忠燕 on 2020/7/3.
 //  Copyright © 2020 张忠燕. All rights reserved.
 //
 
-#import "FSAttributedStringWrapModel.h"
+#import "FSAttributedStringItemWrapper.h"
 
-@implementation FSAttributedStringWrapModel
+@implementation FSAttributedStringItemWrapper
 
 #pragma mark - Initialize Methods
 
@@ -25,41 +25,41 @@
 #pragma mark - <FSAttributedStringProtocol>
 
 /** 设置颜色 */
-- (id<FSAttributedStringProtocol>(^)(UIColor * _Nullable))color
+- (FSAttributedStringItem *(^)(UIColor * _Nullable))color
 {
-    return ^id<FSAttributedStringProtocol> (UIColor * _Nullable color) {
+    return ^FSAttributedStringItem * (UIColor * _Nullable color) {
         self.propertyModel.foregroundColor = color;
         return self;
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(UIFont * _Nullable))font
+- (FSAttributedStringItem *(^)(UIFont * _Nullable))font
 {
-    return ^id<FSAttributedStringProtocol> (UIFont * _Nullable font) {
+    return ^FSAttributedStringItem * (UIFont * _Nullable font) {
         self.propertyModel.font = font;
         return self;
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSNumber * _Nullable))baselineOffset
+- (FSAttributedStringItem *(^)(NSNumber * _Nullable))baselineOffset
 {
-    return ^id<FSAttributedStringProtocol> (NSNumber * _Nullable baselineOffset) {
+    return ^FSAttributedStringItem * (NSNumber * _Nullable baselineOffset) {
         self.propertyModel.baselineOffset = baselineOffset;
         return self;
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSNumber * _Nullable))underlineStyle
+- (FSAttributedStringItem *(^)(NSNumber * _Nullable))underlineStyle
 {
-    return ^id<FSAttributedStringProtocol> (NSNumber * _Nullable underlineStyle) {
+    return ^FSAttributedStringItem * (NSNumber * _Nullable underlineStyle) {
         self.propertyModel.underlineStyle = underlineStyle;
         return self;
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSParagraphStyle * _Nullable))paragraphStyle
+- (FSAttributedStringItem *(^)(NSParagraphStyle * _Nullable))paragraphStyle
 {
-    return ^id<FSAttributedStringProtocol> (NSParagraphStyle * _Nullable paragraphStyle) {
+    return ^FSAttributedStringItem * (NSParagraphStyle * _Nullable paragraphStyle) {
         self.propertyModel.paragraphStyle = paragraphStyle;
         return self;
     };

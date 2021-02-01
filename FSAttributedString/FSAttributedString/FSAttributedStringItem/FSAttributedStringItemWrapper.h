@@ -1,5 +1,5 @@
 //
-//  FSAttributedStringWrapModel.h
+//  FSAttributedStringItemWrapper.h
 //  FSAttributedString
 //
 //  Created by 张忠燕 on 2020/7/3.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FSAttributedStringProtocol.h"
+#import "FSAttributedStringItem.h"
 #import "FSAttributedStringPropertyModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 字符包装模型
-@interface FSAttributedStringWrapModel : NSObject<FSAttributedStringProtocol>
+@interface FSAttributedStringItemWrapper : FSAttributedStringItem
 
 /** 字符 */
 @property (nonatomic, copy, readonly) NSString *string;

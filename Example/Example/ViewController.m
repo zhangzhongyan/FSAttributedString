@@ -47,6 +47,11 @@
         make.height.equalTo(@(100.0f));
     }];
     
+    
+    [self.demoLabel1 fs_makeAttributedString:^(FSAttributedStringMaker * _Nonnull make) {
+        make.append(@"首一个文本蓝色15号字体\n").color(UIColor.blueColor).font([UIFont systemFontOfSize:15]);
+    }];
+    
     [self.demoLabel1 fs_makeAttributedString:^(FSAttributedStringMaker * _Nonnull make) {
         make.append(@"首一个文本蓝色15号字体\n").color(UIColor.blueColor).font([UIFont systemFontOfSize:15]);
         make.append(@"首一个文本绿色16号字体\n").color(UIColor.greenColor).font([UIFont systemFontOfSize:16]);

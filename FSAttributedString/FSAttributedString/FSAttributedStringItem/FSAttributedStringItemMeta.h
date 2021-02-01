@@ -1,5 +1,5 @@
 //
-//  FSAttributedStringMetaModel.h
+//  FSAttributedStringItemMeta.h
 //  FSAttributedString
 //
 //  Created by 张忠燕 on 2020/7/3.
@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FSAttributedStringProtocol.h"
+#import "FSAttributedStringItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 字符元数据模型
-@interface FSAttributedStringMetaModel : NSObject<FSAttributedStringProtocol>
+@interface FSAttributedStringItemMeta : FSAttributedStringItem
 
 /** 指定构造方法 */
 - (instancetype)initWithAttributedString:(NSAttributedString *)attributedString NS_DESIGNATED_INITIALIZER;

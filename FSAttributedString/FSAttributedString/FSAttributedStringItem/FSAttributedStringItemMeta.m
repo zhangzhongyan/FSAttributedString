@@ -1,21 +1,21 @@
 //
-//  FSAttributedStringMetaModel.m
+//  FSAttributedStringItemMeta.m
 //  FSAttributedString
 //
 //  Created by 张忠燕 on 2020/7/3.
 //  Copyright © 2020 张忠燕. All rights reserved.
 //
 
-#import "FSAttributedStringMetaModel.h"
+#import "FSAttributedStringItemMeta.h"
 #import "FSAttributedStringPropertyModel.h"
 
-@interface FSAttributedStringMetaModel ()
+@interface FSAttributedStringItemMeta ()
 
 @property (nonatomic, copy) NSMutableAttributedString *operaterString;
 
 @end
 
-@implementation FSAttributedStringMetaModel
+@implementation FSAttributedStringItemMeta
 
 #pragma mark - Initialize Methods
 
@@ -40,9 +40,9 @@
 #pragma mark - <FSAttributedStringProtocol>
 
 /** 设置颜色 */
-- (id<FSAttributedStringProtocol>(^)(UIColor * _Nullable))color
+- (FSAttributedStringItem *(^)(UIColor * _Nullable))color
 {
-    return ^id<FSAttributedStringProtocol> (UIColor * _Nullable color) {
+    return ^FSAttributedStringItem * (UIColor * _Nullable color) {
         if (color) {
             NSRange range = NSMakeRange(0, self.attributedString.length);
             NSDictionary *attributes = [FSAttributedStringPropertyModel attributedWithForegroundColor:color];
@@ -52,9 +52,9 @@
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(UIFont * _Nullable))font
+- (FSAttributedStringItem *(^)(UIFont * _Nullable))font
 {
-    return ^id<FSAttributedStringProtocol> (UIFont * _Nullable font) {
+    return ^FSAttributedStringItem * (UIFont * _Nullable font) {
         if (font) {
             NSRange range = NSMakeRange(0, self.attributedString.length);
             NSDictionary *attributes = [FSAttributedStringPropertyModel attributedWithFont:font];
@@ -64,9 +64,9 @@
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSNumber * _Nullable))baselineOffset
+- (FSAttributedStringItem *(^)(NSNumber * _Nullable))baselineOffset
 {
-    return ^id<FSAttributedStringProtocol> (NSNumber * _Nullable baselineOffset) {
+    return ^FSAttributedStringItem * (NSNumber * _Nullable baselineOffset) {
         if (baselineOffset) {
             NSRange range = NSMakeRange(0, self.attributedString.length);
             NSDictionary *attributes = [FSAttributedStringPropertyModel attributedWithBaselineOffset:baselineOffset];
@@ -76,9 +76,9 @@
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSNumber * _Nullable))underlineStyle
+- (FSAttributedStringItem *(^)(NSNumber * _Nullable))underlineStyle
 {
-    return ^id<FSAttributedStringProtocol> (NSNumber * _Nullable underlineStyle) {
+    return ^FSAttributedStringItem * (NSNumber * _Nullable underlineStyle) {
         if (underlineStyle) {
             NSRange range = NSMakeRange(0, self.attributedString.length);
             NSDictionary *attributes = [FSAttributedStringPropertyModel attributedWithUnderlineStyle:underlineStyle];
@@ -88,9 +88,9 @@
     };
 }
 
-- (id<FSAttributedStringProtocol>(^)(NSParagraphStyle * _Nullable))paragraphStyle
+- (FSAttributedStringItem *(^)(NSParagraphStyle * _Nullable))paragraphStyle
 {
-    return ^id<FSAttributedStringProtocol> (NSParagraphStyle * _Nullable paragraphStyle) {
+    return ^FSAttributedStringItem * (NSParagraphStyle * _Nullable paragraphStyle) {
         if (paragraphStyle) {
             NSRange range = NSMakeRange(0, self.attributedString.length);
             NSDictionary *attributes = [FSAttributedStringPropertyModel attributedWithParagraphStyle:paragraphStyle];

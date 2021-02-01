@@ -1,5 +1,5 @@
 PODS:
-  - FSAttributedString (1.0.0)
+  - FSAttributedString (1.0.1)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FSAttributedString: 5843c92c93e7b99e060e9b71f677b15fefa8824d
+  FSAttributedString: a596cc103180880713ce567e513232f01fc0e6fe
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: e609cc482a924f874944caf1071a0b95e04091e6

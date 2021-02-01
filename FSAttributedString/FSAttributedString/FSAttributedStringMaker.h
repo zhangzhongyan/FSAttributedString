@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FSAttributedStringProtocol.h"
+#import "FSAttributedStringItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,10 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSAttributedString *)makeAttributedString:(void(^)(FSAttributedStringMaker *make))block;
 
 /** 添加字符模型 */
-- (id<FSAttributedStringProtocol> (^)(NSString *))append;
+- (FSAttributedStringItem * (^)(NSString *text))append;
 
 /** 添加富文本字符模型 */
-- (id<FSAttributedStringProtocol> (^)(NSAttributedString *))appendAttribute;
+- (FSAttributedStringItem * (^)(NSAttributedString *attrribute))appendAttribute;
 
 /** 设置所有段落 */
 - (void (^)(NSParagraphStyle *))paragrah;
