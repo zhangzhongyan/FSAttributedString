@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FSAttributedString"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "一个轻量级的字符拼接工具"
 
   # This description is used to generate tags and improve search results.

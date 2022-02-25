@@ -23,7 +23,7 @@
 
 #pragma mark - Public Methods
 
-+ (NSAttributedString *)makeAttributedString:(void(^)(FSAttributedStringMaker *maker))block
++ (NSMutableAttributedString *)makeAttributedString:(void(^)(FSAttributedStringMaker *maker))block
 {
     FSAttributedStringMaker *maker = [[FSAttributedStringMaker alloc] init];
     block(maker);
@@ -59,7 +59,7 @@
 
 #pragma mark - Private Methods
 
-- (NSAttributedString *)attributedString
+- (NSMutableAttributedString *)attributedString
 {
     NSMutableAttributedString *items = [[NSMutableAttributedString alloc] init];
     for (FSAttributedStringItem * model in self.stringModels) {

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FSAttributedStringMaker : NSObject
 
 /** 便捷获取属性字符 */
-+ (NSAttributedString *)makeAttributedString:(void(^)(FSAttributedStringMaker *make))block;
++ (NSMutableAttributedString *)makeAttributedString:(void(^)(FSAttributedStringMaker *make))block;
 
 /** 添加字符模型 */
 - (FSAttributedStringItem * (^)(NSString *text))append;
